@@ -15,7 +15,7 @@ User instructions will be detailed here.
 
 ## Authors
 - **Author Name** - *Brief role description* - [github_link](#)
-- **Isaac Vander Sluis** - *Front-end web development* - [ibvandersluis](github.com/ibvandersluis)
-- **Mark Anderton** - *XML Database* - [TheManderton](github.com/themanderton)
+- **Isaac Vander Sluis** - *Front-end web development* - [ibvandersluis](https://github.com/ibvandersluis)
+- **Mark Anderton** - *XML Database* - [TheManderton](https://github.com/themanderton)
 - **Boris Karpov** - *Requirements*
 - **Jo Ziegenhagen** - *Project Planning*
