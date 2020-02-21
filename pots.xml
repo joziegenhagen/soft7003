@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tracker>
+	<farms>
+		<farm>
+			<name>McCartney's Farm</name>
+			<type>Multi-field</type>
+			<location>Strawberry Fields</location>
+			<hives>
+				<hiveNumber>A1</hiveNumber>
+				<hiveNumber>A2</hiveNumber>
+				<hiveNumber>A3</hiveNumber>
+				<hiveNumber>A4</hiveNumber>
+				<hiveNumber>A5</hiveNumber>
+				<hiveNumber>A6</hiveNumber>
+				<hiveNumber>A7</hiveNumber>
+				<hiveNumber>A8</hiveNumber>
+				<hiveNumber>A9</hiveNumber>
+				<hiveNumber>A10</hiveNumber>
+			</hives>
+		</farm>
+		<farm>
+			<name>Jagger's Farm</name>
+			<type>Organic, single-field</type>
+			<location>Wild Horses Road</location>
+			<hives>
+				<hiveNumber>B1</hiveNumber>
+				<hiveNumber>B2</hiveNumber>
+				<hiveNumber>B3</hiveNumber>
+				<hiveNumber>B4</hiveNumber>
+				<hiveNumber>B5</hiveNumber>
+				<hiveNumber>B6</hiveNumber>
+				<hiveNumber>B7</hiveNumber>
+				<hiveNumber>B8</hiveNumber>
+				<hiveNumber>B9</hiveNumber>
+				<hiveNumber>B10</hiveNumber>
+			</hives>
+		</farm>
+		<farm>
+			<name>May's Farm</name>
+			<type>Multi Field</type>
+			<location>Mingo City</location>
+			<hives>
+				<hiveNumber>C1</hiveNumber>
+				<hiveNumber>C2</hiveNumber>
+				<hiveNumber>C3</hiveNumber>
+				<hiveNumber>C4</hiveNumber>
+				<hiveNumber>C5</hiveNumber>
+				<hiveNumber>C6</hiveNumber>
+				<hiveNumber>C7</hiveNumber>
+				<hiveNumber>C8</hiveNumber>
+				<hiveNumber>C9</hiveNumber>
+				<hiveNumber>C10</hiveNumber>
+			</hives>
+		</farm>
+	</farms>
+	<stores>
+		<store>
+			<name>Harrison's Store</name>
+			<type>Supermarket</type>
+			<location>Abbey Road</location>
+			<lot>
+				<number>99099099</number>
+				<quantity>2</quantity>
+			</lot>
+			<lot>
+				<number>88088088</number>
+				<quantity>4</quantity>
+			</lot>
+			<lot>
+				<number>77077077</number>
+				<quantity>4</quantity>
+			</lot>
+		</store>
+		<store>
+			<name>Richards' Store</name>
+			<type>Indipendent</type>
+			<location>Brown Sugar Road</location>
+			<lot>
+				<number>99099099</number>
+				<quantity>3</quantity>
+			</lot>
+			<lot>
+				<number>88088088</number>
+				<quantity>4</quantity>
+			</lot>
+			<lot>
+				<number>77077077</number>
+				<quantity>4</quantity>
+			</lot>
+		</store>
+		<store>
+			<name>Mercury's Store</name>
+			<type>Supermarket</type>
+			<location>Brighton Rock Road</location>
+			<lot>
+				<number>99099099</number>
+				<quantity>3</quantity>
+			</lot>
+			<lot>
+				<number>88088088</number>
+				<quantity>4</quantity>
+			</lot>
+			<lot>
+				<number>77077077</number>
+				<quantity>4</quantity>
+			</lot>
+		</store>		
+	</stores>
+	<importers>
+		<importer>
+			<name>Lennon's Imporing Ltd</name>
+			<location>Penny Lane</location>
+			<lot>
+				<number>99099099</number>
+				<quantity>3</quantity>
+			</lot>
+		</importer>
+		<importer>
+			<name>Watts' Imporing Ltd</name>
+			<location>Voodoo Lounge Park</location>
+			<lot>
+				<number>88088088</number>
+				<quantity>3</quantity>
+			<lot>
+				<number>77077077</number>
+				<quantity>3</quantity>
+			</lot>
+			</lot>
+		</importer>
+	</importers>
+	<packers>
+		<packer>
+			<name>Star's Packing Ltd</name>
+			<location>The long and winding road</location>
+			<lot>
+				<number>99099099</number>
+				<quantity>3</quantity>
+				<qualityControl>Pass</qualityControl>
+			</lot>
+			<lot>
+				<number>88088088</number>
+				<quantity>3</quantity>
+				<qualityControl>Fail</qualityControl>
+			</lot>
+		</packer>
+		<packer>
+			<name>Wood's Packing Ltd</name>
+			<location>Exile, Main St</location>
+			<lot>
+				<number>77077077</number>
+				<quantity>3</quantity>
+				<qualityControl>Fail</qualityControl>
+			</lot>
+		</packer>
+	</packers>
+	<lots>
+		<lot>
+			<number>99099099</number>
+			<quantity>10</quantity>
+			<farm>McCartney's Farm</farm>
+			<importer>Lennon's Imporing Ltd</importer>
+			<packer>Star's Packing Ltd</packer>
+			<honeyType>Norwegian Wood Honey</honeyType>
+			<hiveNumber>A1</hiveNumber>
+			<websiteLink></websiteLink>
+			<qualityControl>pass</qualityControl>
+			<weight>500</weight>
+		</lot>
+		<lot>
+			<number>88088088</number>
+			<quantity>20</quantity>
+			<farm>Jagger's Farm</farm>
+			<importer>Watts' Imporing Ltd</importer>
+			<packer>Wood's Packing Ltd</packer>
+			<honeyType>Sticky Fingers Honey</honeyType>
+			<hiveNumber>C6</hiveNumber>
+			<websiteLink></websiteLink>
+			<qualityControl>fail</qualityControl>
+			<weight>1000</weight>
+		</lot>
+		<lot>
+			<number>77077077</number>
+			<quantity>20</quantity>
+			<farm>May's Farm</farm>
+			<importer>Watts' Imporing Ltd</importer>
+			<packer>Star's Packing Ltd</packer>
+			<honeyType>Hot Space Honey</honeyType>
+			<hiveNumber>D9</hiveNumber>
+			<websiteLink></websiteLink>
+			<qualityControl>fail</qualityControl>
+			<weight>1000</weight>
+		</lot>		
+	</lots>	
+</tracker>
