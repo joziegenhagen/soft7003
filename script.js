@@ -4,7 +4,7 @@
 
 function login(form){
   if (form.email.value == "honeyguy@gmail.com" && form.password.value == "password") {
-    window.location.href = "query.html";
+    window.location.href = "search.html";
   } else {
     alert("Invalid login");
     form.reset();
