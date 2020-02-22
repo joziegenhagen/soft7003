@@ -74,7 +74,7 @@ body {
     background: #f4f4f4;
   }
   
-  input[type=submit] {
+  input[type=button] {
     font-size: 1.2em;
     font-weight: bold;
     border: 1px solid #d1d1d1;

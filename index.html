@@ -1,3 +1,9 @@
+<!--
+ - Name        : index.html
+ - Author      : Isaac Vander Sluis
+ - Description : Login page for accessing Honey Tracker XML database
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +18,9 @@
     <form>
       <h1>Welcome</h1>
       <section class="form">
-        <input type="email" class="textbox" placeholder="Email address" autofocus>
-        <input type="password" class="textbox" placeholder="Password">
-        <input type="submit" value="Login">
+        <input type="email" name="email" class="textbox" placeholder="Email address" autofocus>
+        <input type="password" name="password" class="textbox" placeholder="Password">
+        <input type="button" onclick="login(this.form)" value="Login">
       </section>
     </form>
   </section>
