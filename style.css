@@ -1,88 +1,96 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #2d4259;
-    color: #f4f4f4;
-  }
-  
-  .content {
-    margin: 0 auto;
-    width: 350px;
-    text-align: center;
-  }
-  
-  h1 {
-    padding: 10px;
-    background: #d55efa;
-    background-image: linear-gradient(#DC735D, #D55E4A);
-    color: inherit;
-    border-radius: 4px;
-  }
-  
-  .form {
-    padding: 20px;
-    background: #f4f4f4;
-    color: inherit;
-    border-radius: 4px;
-  }
-  
-  .inline-radio {
-    background: #6fb447;
-    background-image: linear-gradient(#5ca038, #7cbd51);
-    width: 90%;
-    margin: 5px auto 15px auto;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 4px;
-    height: 45px;
-  }
-  
-  input {
-    width: 90%;
-    margin: 0 auto;
-    background: #f4f4f4;
-    color: #494d59;
-  }
-  
-  input.textbox {
-    font-size: 1em;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 1px solid #d8d8d8;
-    margin: 5px;
-    padding: 10px 0;
-    padding-left: 5px;
-  }
-  
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #acaaaa;
-    background: #f4f4f4;
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #acaaaa;
-    background: #f4f4f4;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: #acaaaa;
-    background: #f4f4f4;
-  }
-  
-  input[type=button] {
-    font-size: 1.2em;
-    font-weight: bold;
-    border: 1px solid #d1d1d1;
-    background: #fdfdfd;
-    background-image: linear-gradient(#fdfdfd, #eeeeee);
-    color: #494d59;
-    border-radius: 4px;
-    padding: 10px;
-    margin-top: 25px;
-    margin-bottom: 5px;
-  }
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #2d4259;
+  color: #f4f4f4;
+}
+
+.content {
+  margin: 0 auto;
+  width: 350px;
+  text-align: center;
+}
+
+h1 {
+  padding: 10px;
+  background: #d55efa;
+  background-image: linear-gradient(#DC735D, #D55E4A);
+  color: inherit;
+  border-radius: 4px;
+}
+
+.form {
+  padding: 20px;
+  background: #f4f4f4;
+  color: inherit;
+  border-radius: 4px;
+}
+
+.inline-radio {
+  background: #6fb447;
+  background-image: linear-gradient(#5ca038, #7cbd51);
+  width: 90%;
+  margin: 5px auto 15px auto;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 4px;
+  height: 45px;
+}
+
+input {
+  width: 90%;
+  margin: 0 auto;
+  background: #f4f4f4;
+  color: #494d59;
+}
+
+input.textbox {
+  font-size: 1em;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #d8d8d8;
+  margin: 5px;
+  padding: 10px 0;
+  padding-left: 5px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #acaaaa;
+  background: #f4f4f4;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #acaaaa;
+  background: #f4f4f4;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #acaaaa;
+  background: #f4f4f4;
+}
+
+input[type=button] {
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 1px solid #d1d1d1;
+  background: #fdfdfd;
+  background-image: linear-gradient(#fdfdfd, #eeeeee);
+  color: #494d59;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+input.textbox[name=number] {
+  border: 1px solid #d8d8d8;
+}
+
+p {
+  color: #494d59;
+}
