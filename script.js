@@ -2,7 +2,7 @@
     Author      : Isaac Vander Sluis
     Description : Handles logic for web app */
 
-function login(form){
+function login(form) {
   if (form.email.value == "honeyguy@gmail.com" &&
       form.password.value == "password") {
     window.location.href = "search.html";
@@ -10,6 +10,10 @@ function login(form){
     alert("Invalid login");
     form.reset();
   }
+}
+
+function xslTest(searchterm) {
+  console.log(searchterm)
 }
 
 function loadXMLDoc(filename) {
