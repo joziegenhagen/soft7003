@@ -19,8 +19,8 @@
         <h1>Honey Tracker</h1>
         <section class="form">
           <p>Enter number:</p>
-          <input type="number" name="number" class="textbox">
-          <input type="button" onclick="displayResult()" value="Search">
+          <input id="search" type="number" name="number" class="textbox">
+          <input type="button" onclick="xslTest(document.getElementById('search').value)" value="Search">
         </section>
       </form>
       <div id="result" />

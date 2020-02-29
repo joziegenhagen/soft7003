@@ -13,7 +13,11 @@ function login(form) {
 }
 
 function xslTest(searchterm) {
-  console.log(searchterm)
+  console.log(searchterm);
+  node = document.createElement("p")
+  textnode = document.createTextNode(searchterm);
+  node.appendChild(textnode);
+  document.getElementById("result").appendChild(node);
 }
 
 function loadXMLDoc(filename) {
