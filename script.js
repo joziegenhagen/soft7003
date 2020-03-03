@@ -27,7 +27,6 @@ function login(form) {
             txt += nodes[i].childNodes[0].nodeValue + "<br>";
         }
     }
-    document.getElementById("demo").innerHTML = txt;
 }
 
 function xslTest(searchterm) {
