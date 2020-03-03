@@ -1,23 +1,33 @@
 /*  Name        : script.js
     Author      : Isaac Vander Sluis
     Description : Handles logic for web app */
-
-
-
-function login(form) {
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        showResult(xhttp.responseXML);
+    }
+};
 xhttp.open("GET", "passwords.xml", true);
-xhttp.send();
-	text eVal = form.email.value;
-	text pVal = form.password.value;
-	ePath =  `/users/user[name=${eVal}]/name[text()]`;
-	pPath =   `/users/user[name=${pVal}]/name[text()]`;
-	window.alert(eVal);
-	if (eVal = ePath ){
-    window.location.href = "search.html";
-  } else {
-    alert("Invalid login");
-    form.reset();
-  }
+xhttp.send(); 
+function login(form) {
+    var txt = "";
+    path = "/users/user/name[text()]";
+    if (xml.evaluate) {
+        var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+        var result = nodes.iterateNext();
+        while (result) {
+            txt += result.childNodes[0].nodeValue + "<br>";
+            result = nodes.iterateNext();
+        } 
+    // Code For Internet Explorer
+    } else if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+        xml.setProperty("SelectionLanguage", "XPath");
+        nodes = xml.selectNodes(path);
+        for (i = 0; i < nodes.length; i++) {
+            txt += nodes[i].childNodes[0].nodeValue + "<br>";
+        }
+    }
+    document.getElementById("demo").innerHTML = txt;
 }
 
 function xslTest(searchterm) {
