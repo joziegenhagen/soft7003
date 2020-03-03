@@ -4,23 +4,6 @@
 function login(form) {
     
             window.alert(form);
-    var txt = "";
-    path = "/users/user/name[text()]";
-    if (xml.evaluate) {
-        var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
-        var result = nodes.iterateNext();
-        while (result) {
-            txt += result.childNodes[0].nodeValue + "<br>";
-            result = nodes.iterateNext();
-        } 
-    // Code For Internet Explorer
-    } else if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
-        xml.setProperty("SelectionLanguage", "XPath");
-        nodes = xml.selectNodes(path);
-        for (i = 0; i < nodes.length; i++) {
-            txt += nodes[i].childNodes[0].nodeValue + "<br>";
-        }
-    }
 }
 
 function xslTest(searchterm) {
