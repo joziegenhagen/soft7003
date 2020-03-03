@@ -2,8 +2,8 @@
     Author      : Isaac Vander Sluis
     Description : Handles logic for web app */
 function login(form) {
-    
-            window.alert(form);
+    if(form.email.value = 'farmGuy1')
+            window.alert(form.email.value);
 }
 
 function xslTest(searchterm) {
@@ -42,5 +42,3 @@ function displayResult() {
     document.getElementById("result").appendChild(resultDocument);
   }
 }
-
-
