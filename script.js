@@ -13,10 +13,10 @@ xhttp.send();
 
 function login(form, xml) {
 	text eVal = form.email.value;
-    ePath =  `/bookstore/book[price=${eVal}]/price[text()]`;
+    ePath =  `/users/user[name=${eVal}]/name[text()]`;
 	window.alert(ePath);
     text pVal = form.password.value;
-    pPath =   `/bookstore/book[price=${pVal}]/price[text()]`;
+    pPath =   `/users/user[name=${pVal}]/name[text()]`;
     
   if (eVal = ePath ){
     window.location.href = "search.html";
