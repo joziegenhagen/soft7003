@@ -13,10 +13,10 @@ xhttp.send();
 function showResult(form) {
 
     path = `/users/user[name=${email}]/name[text()]`;
-    var email = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null);
+    var email = xmlDoc.evaluate(path,xmlDoc,null,XPathResult.ANY_TYPE,null);
     
     path = `/users/user[name=${password}]/password[text()]`;
-    var password = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null);
+    var password = xmlDoc.evaluate(path,xmlDoc,null,XPathResult.ANY_TYPE,null);
  
  var emailValue = email.iterateNext().childNodes[0].nodeValue;
     window.alert(emailValue);
