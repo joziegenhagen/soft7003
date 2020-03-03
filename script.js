@@ -12,9 +12,10 @@ xhttp.open("GET", "passwords.xml", true);
 xhttp.send(); 
 
 function login(form, xml) {
+	window.alert(ePath);
 	text eVal = form.email.value;
     ePath =  `/users/user[name=${eVal}]/name[text()]`;
-	window.alert(ePath);
+	
     text pVal = form.password.value;
     pPath =   `/users/user[name=${pVal}]/name[text()]`;
     
