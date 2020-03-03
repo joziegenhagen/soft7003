@@ -4,19 +4,19 @@
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        showResult(xhttp.responseXML);
+        login(xhttp.responseXML);
     }
 };
 xhttp.open("GET", "passwords.xml", true);
 xhttp.send(); 
 
-function showResult(form) {
+function login(form) {
 
     path = `/users/user[name=${email}]/name[text()]`;
-    var email = xmlDoc.evaluate(path,xmlDoc,null,XPathResult.ANY_TYPE,null);
+    var email = xhttp.responseXML.evaluate(path,xmlDoc,null,XPathResult.ANY_TYPE,null);
     
     path = `/users/user[name=${password}]/password[text()]`;
-    var password = xmlDoc.evaluate(path,xmlDoc,null,XPathResult.ANY_TYPE,null);
+    var password = xhttp.responseXML.evaluate(path,xmlDoc,null,XPathResult.ANY_TYPE,null);
  
  var emailValue = email.iterateNext().childNodes[0].nodeValue;
     window.alert(emailValue);
