@@ -10,6 +10,8 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "passwords.xml", true);
 xhttp.send(); 
 function login(form) {
+    
+            window.alert(form);
     var txt = "";
     path = "/users/user/name[text()]";
     if (xml.evaluate) {
