@@ -27,7 +27,7 @@ function showResult(form) {
     var formEmail = form.email.value;
     var formPassword = form.password.value;
     
-    if(formEmail = emailValue && formPassword = passwordValue){
+    if(formEmail == emailValue && formPassword == passwordValue){
     window.location.href = "search.html";
   } else {
     alert("Invalid login");
