@@ -12,9 +12,9 @@ xhttp.open("GET", "passwords.xml", true);
 xhttp.send(); 
 
 function login(form, xml) {
-	var eVal = form.email.value;
+	text eVal = form.email.value;
     ePath =  `/bookstore/book[price=${eVal}]/price[text()]`;
-    var pVal = form.password.value;
+    text pVal = form.password.value;
     pPath =   `/bookstore/book[price=${pVal}]/price[text()]`;
     
   if (eVal = ePath &&
