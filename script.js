@@ -1,9 +1,40 @@
 /*  Name        : script.js
     Author      : Isaac Vander Sluis
     Description : Handles logic for web app */
-function login(form) {
-    if(form.email.value = 'farmGuy1')
-            window.alert(form.email.value);
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        showResult(xhttp.responseXML);
+    }
+};
+xhttp.open("GET", "passwords.xml", true);
+xhttp.send(); 
+
+function showResult(form) {
+
+    path = `/users/user[name=${email}]/name[text()]`;
+    var email = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null);
+    
+    path = `/users/user[name=${password}]/password[text()]`;
+    var password = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null);
+ 
+ var emailValue = email.iterateNext().childNodes[0].nodeValue;
+    window.alert(emailValue);
+
+ var passwordValue = password.iterateNext().childNodes[0].nodeValue;
+    window.alert(passwordValue);
+    
+    var formEmail = form.email.value;
+    var formPassword = form.password.value;
+    
+    if(formEmail = emailValue && formPassword = passwordValue){
+    window.location.href = "search.html";
+  } else {
+    alert("Invalid login");
+    form.reset();
+  }
+    
+
 }
 
 function xslTest(searchterm) {
