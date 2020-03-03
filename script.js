@@ -2,11 +2,6 @@
     Author      : Isaac Vander Sluis
     Description : Handles logic for web app */
 var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        login(xhttp.responseXML);
-    }
-};
 xhttp.open("GET", "passwords.xml", true);
 xhttp.send(); 
 
