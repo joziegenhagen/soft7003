@@ -1,32 +1,43 @@
 /*  Name        : script.js
     Author      : Isaac Vander Sluis
     Description : Handles logic for web app */
-var xhttp = new XMLHttpRequest();
-xhttp.open("GET", "passwords.xml", true);
-xhttp.send(); 
 
-function login(form) {
 
-    path = `/users/user[name=${email}]/name[text()]`;
-    var email = xhttp.responseXML.evaluate(path,xhttp.responseXML,null,XPathResult.ANY_TYPE,null).childNodes[0].nodeValue;
+function login(form) { 
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+
+            window.alert(xhttp.responseXML);
+                getResult(xhttp.responseXML, form)
+        }
+    };
+}
+
+function getResult(xml, form){
     
-    path = `/users/user[name=${password}]/password[text()]`;
-    var password = xhttp.responseXML.evaluate(path,xhttp.responseXML,null,XPathResult.ANY_TYPE,null).childNodes[0].nodeValue;
- 
-    window.alert(email);
-    window.alert(password);
+    if (xml.evaluate) {
     
+        path = `/users/user[name=${email}]/name[text()]`;
+        var email = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null).iterateNext().childNodes[0].nodeValue;
+
+        path = `/users/user[name=${password}]/password[text()]`;
+        var password = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null).iterateNext().childNodes[0].nodeValue;
+
+        window.alert(email);
+        window.alert(password);
+    
+    }
     var formEmail = form.email.value;
     var formPassword = form.password.value;
     
     if(formEmail == email && formPassword == password){
-    window.location.href = "search.html";
+        window.location.href = "search.html";
   } else {
-    alert("Invalid login");
-    form.reset();
+        alert("Invalid login");
+        form.reset();
   }
-    
-
+}
 }
 
 function xslTest(searchterm) {
