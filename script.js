@@ -17,7 +17,7 @@ xhttp.send();
 }
 
 function getResult(xml, form){
-    
+    if(xml.evaluate){
         path = `/users/user[name=${email}]/name[text()]`;
         var email = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null).iterateNext().childNodes[0].nodeValue;
 
@@ -26,7 +26,7 @@ function getResult(xml, form){
 
         window.alert(email);
         window.alert(password);
-    
+    }
     var formEmail = form.email.value;
     var formPassword = form.password.value;
     
