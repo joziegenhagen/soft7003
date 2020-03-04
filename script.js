@@ -22,10 +22,11 @@ function getResult(xml, form){
     var formPassword = form.password.value;
     
     if(xml.evaluate){
-        path = "/users/user[name=${email}]/name";
+        path = `/users/user[name=${email}]/name`;
+        window.alert(path);
         var email = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null).iterateNext().childNodes[0].nodeValue;
 
-        path = "/users/user[name=${password}]/password";
+        path = `/users/user[name=${password}]/password`;
         var password = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null).iterateNext().childNodes[0].nodeValue;
 
         window.alert(email);
