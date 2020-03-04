@@ -7,8 +7,6 @@ function login(form) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-
-            window.alert(xhttp.responseXML);
                 getResult(xhttp.responseXML, form)
         }  
     };
@@ -17,23 +15,22 @@ xhttp.send();
 }
 
 function getResult(xml, form){
-    
+
     var formEmail = form.email.value;
     var formPassword = form.password.value;
-        window.alert(formEmail);
-    
-    if(xml.evaluate){
-        path = `/users/user[name=${formEmail}]/name`;
-        window.alert(path);
-        var email = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null).iterateNext().childNodes[0].nodeValue;
+    window.alert(formEmail);
 
-        path = `/users/user[name=${formPassword}]/password`;
-        var password = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null).iterateNext().childNodes[0].nodeValue;
-
-        window.alert(email);
-        window.alert(password);
+    if (xml.evaluate) {
+      path = "/users/user/name";
+        var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null).iterateNext().childNodes[0].nodeValue;
+        while (nodes) {
+            if(nodes = formEmail){
+            	window.alert(nodes);
+            }
+            nodes = nodes.iterateNext();
+        } 
     }
-    
+
     if(formEmail == email && formPassword == password){
         window.location.href = "search.html";
   } else {
