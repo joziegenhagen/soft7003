@@ -17,6 +17,10 @@ xhttp.send();
 }
 
 function getResult(xml, form){
+    
+    var formEmail = form.email.value;
+    var formPassword = form.password.value;
+    
     if(xml.evaluate){
         path = "/users/user[name=${email}]/name";
         var email = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null).iterateNext().childNodes[0].nodeValue;
@@ -27,8 +31,6 @@ function getResult(xml, form){
         window.alert(email);
         window.alert(password);
     }
-    var formEmail = form.email.value;
-    var formPassword = form.password.value;
     
     if(formEmail == email && formPassword == password){
         window.location.href = "search.html";
