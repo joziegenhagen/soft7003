@@ -20,6 +20,7 @@ function getResult(xml, form){
     
     var formEmail = form.email.value;
     var formPassword = form.password.value;
+        window.alert(formEmail);
     
     if(xml.evaluate){
         path = `/users/user[name=${email}]/name`;
