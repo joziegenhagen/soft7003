@@ -18,26 +18,29 @@ function getResult(xml, form){
 
     var formEmail = form.email.value;
     var formPassword = form.password.value;
-    window.alert(formEmail);
+
 
     if (xml.evaluate) {
-      path = "/users/user/name";
-        var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null).iterateNext().childNodes[0].nodeValue;
-        while (nodes) {
-            if(nodes = formEmail){
-            	window.alert(nodes);
+        var email = xml.evaluate("/users/user/name", xml, null, XPathResult.ANY_TYPE, null);
+        var password = xml.evaluate("/users/user/password", xml, null, XPathResult.ANY_TYPE, null);
+    window.alert("e " + email);        
+        while (email) {
+            if(email.iterateNext().childNodes[0].nodeValue == formEmail && password.iterateNext().childNodes[0].nodeValue == formPassword){
+              window.location.href = "search.html";
+            }else{
+              email.iterateNext().childNodes[0].nodeValue;
+              password.iterateNext().childNodes[0].nodeValue;
+
             }
-            nodes = nodes.iterateNext();
+            
+        }if(email == null){
+            alert("Invalid login");
+            form.reset();
         } 
     }
-
-    if(formEmail == email && formPassword == password){
-        window.location.href = "search.html";
-  } else {
-        alert("Invalid login");
-        form.reset();
+        
   }
-}
+
 
 function xslTest(searchterm) {
   console.log(searchterm);
