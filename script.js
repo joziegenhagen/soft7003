@@ -38,7 +38,6 @@ function getResult(xml, form){
         form.reset();
   }
 }
-}
 
 function xslTest(searchterm) {
   console.log(searchterm);
