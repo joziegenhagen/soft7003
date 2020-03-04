@@ -19,7 +19,7 @@ function login(form) {
     var formEmail = form.email.value;
     var formPassword = form.password.value;
     
-    if(formEmail == emailValue && formPassword == passwordValue){
+    if(formEmail == email && formPassword == password){
     window.location.href = "search.html";
   } else {
     alert("Invalid login");
