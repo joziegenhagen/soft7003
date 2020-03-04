@@ -13,10 +13,10 @@ function login(form) {
     path = `/users/user[name=${password}]/password[text()]`;
     var password = xhttp.responseXML.evaluate(path,xhttp.responseXML,null,XPathResult.ANY_TYPE,null);
  
- var emailValue = email.iterateNext().childNodes[0].nodeValue;
+ var emailValue = email.childNodes[0].nodeValue;
     window.alert(emailValue);
 
- var passwordValue = password.iterateNext().childNodes[0].nodeValue;
+ var passwordValue = password.childNodes[0].nodeValue;
     window.alert(passwordValue);
     
     var formEmail = form.email.value;
