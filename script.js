@@ -18,10 +18,10 @@ xhttp.send();
 
 function getResult(xml, form){
     if(xml.evaluate){
-        path = "/users/user[name=${email}]/name[text()]";
+        path = "/users/user[name=${email}]/name";
         var email = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null).iterateNext().childNodes[0].nodeValue;
 
-        path = "/users/user[name=${password}]/password[text()]";
+        path = "/users/user[name=${password}]/password";
         var password = xml.evaluate(path,xml,null,XPathResult.ANY_TYPE,null).iterateNext().childNodes[0].nodeValue;
 
         window.alert(email);
