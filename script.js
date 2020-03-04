@@ -8,10 +8,10 @@ xhttp.send();
 function login(form) {
 
     path = `/users/user[name=${email}]/name[text()]`;
-    var email = xhttp.responseXML.evaluate(path,xhttp.responseXML,null,XPathResult.ANY_TYPE,null);
+    var email = xhttp.responseXML.evaluate(path,xhttp.responseXML,null,XPathResult.ANY_TYPE,null).nodeValue;
     
     path = `/users/user[name=${password}]/password[text()]`;
-    var password = xhttp.responseXML.evaluate(path,xhttp.responseXML,null,XPathResult.ANY_TYPE,null);
+    var password = xhttp.responseXML.evaluate(path,xhttp.responseXML,null,XPathResult.ANY_TYPE,null).nodeValue;
  
     window.alert(email);
     window.alert(password);
