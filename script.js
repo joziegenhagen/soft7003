@@ -22,15 +22,15 @@ function getResult(xml, form){
 
     if (xml.evaluate) {
         var email = xml.evaluate("/users/user/name", xml, null, XPathResult.ANY_TYPE, null);
-        var emailNode = email.iterateNext();
         var password = xml.evaluate("/users/user/password", xml, null, XPathResult.ANY_TYPE, null);
-        var passwordNode = password.iterateNext();
+		var emailNode = email.iterateNext();
+		var passwordNode = password.iterateNext();
         while (emailNode) {
-            if(emailNode.childNodes[0].nodeValue == formEmail && passwordNode.childNodes[0].nodeValue == formPassword){
+            if(email.childNodes[0].nodeValue == formEmail && password.childNodes[0].nodeValue == formPassword){
               window.location.href = "search.html";
             }else{
-              emailNode = emailNode.iterateNext();
-              passwordNode = passwordNode.iterateNext();
+              emailNode = email.iterateNext();
+              passwordNode = password.iterateNext();
 
             }
             
