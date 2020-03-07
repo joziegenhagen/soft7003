@@ -2,47 +2,6 @@
     Author      : Isaac Vander Sluis
     Description : Handles logic for web app */
 
-
-function login(form) { 
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-                getResult(xhttp.responseXML, form)
-        }  
-    };
-xhttp.open("GET", "passwords.xml", true);
-xhttp.send(); 
-}
-
-function getResult(xml, form){
-
-    var formEmail = form.email.value;
-    var formPassword = form.password.value;
-
-
-    if (xml.evaluate) {
-        var email = xml.evaluate("/users/user/name", xml, null, XPathResult.ANY_TYPE, null);
-        var password = xml.evaluate("/users/user/password", xml, null, XPathResult.ANY_TYPE, null);
-		var emailNode = email.iterateNext();
-		var passwordNode = password.iterateNext();
-        while (emailNode) {
-            if(email.childNodes[0].nodeValue == formEmail && password.childNodes[0].nodeValue == formPassword){
-              window.location.href = "search.html";
-            }else{
-              emailNode = email.iterateNext();
-              passwordNode = password.iterateNext();
-
-            }
-            
-        }if(email == null){
-            alert("Invalid login");
-            form.reset();
-        } 
-    }
-        
-  }
-
-
 function xslTest(searchterm) {
   console.log(searchterm);
   node = document.createElement("p")
