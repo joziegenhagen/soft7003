@@ -13,6 +13,25 @@
   <title>Honey Tracker | Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+   var xml;
+  $('#button').click(function(){
+       $.get('passwords.xml', null, function (data, textStatus) {
+           xml=data;
+            $(xml).find('user').each( function(){
+                var item = $(this);
+
+                if(item.find('name').text()==$('#userid').val() && item.find('password').text()==$('#pwd').val())
+                {
+                    window.open('search.html');
+                }
+           });
+        });
+    });
+});
+</script>
 <body>
   <section class="content">
     <form>
