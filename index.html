@@ -14,7 +14,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script>
+<body>
+  <section class="content">
+    <form>
+      <h1>Honey Tracker</h1>
+      <section class="form">
+        <input type="email" name="email" class="textbox" placeholder="Email address" autofocus>
+        <input type="password" name="password" class="textbox" placeholder="Password">
+        <input type="button" id="log" value="Login">
+      </section>
+    </form>
+  </section>
+ <script>
     $(document).ready(function(){
    var xml;
   $('#log').click(function(){
@@ -32,17 +43,6 @@
     });
 });
 </script>
-<body>
-  <section class="content">
-    <form>
-      <h1>Honey Tracker</h1>
-      <section class="form">
-        <input type="email" name="email" class="textbox" placeholder="Email address" autofocus>
-        <input type="password" name="password" class="textbox" placeholder="Password">
-        <input type="button" id="log" value="Login">
-      </section>
-    </form>
-  </section>
   <script src="script.js"></script>
 </body>
 </html>
