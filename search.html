@@ -12,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Honey Tracker | Search</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   </head>
   <body>
     <section class="content">
@@ -19,12 +20,37 @@
         <h1>Honey Tracker</h1>
         <section class="form">
           <p>Enter number:</p>
-          <input id="search" type="number" name="number" class="textbox">
-          <input type="button" onclick="xslTest(document.getElementById('search').value)" value="Search">
+          <input id="searchbox" type="number" name="number" class="textbox">
+          <input id="searchbutton" type="button" onclick="" value="Search">
         </section>
       </form>
       <div id="result" />
     </section>
+    <script>
+      $(document).ready(function(){
+        var xml;
+        var searchvalue;
+        // When user clicks login button (#log), 
+        $('#searchbutton').click(function(){
+          searchvalue = document.getElementById('searchbox').value;
+          // Opens pots.xml
+          $.get('pots.xml', null, function (data, textStatus) {
+            xml=data;  
+            $(xml).find('number').each( function(){
+              var item = $(this);
+
+              if(item.find('number').text()==searchvalue)
+              {
+                node = document.createElement("p")
+                textnode = document.createTextNode(item.find('farm'));
+                node.appendChild(textnode);
+                document.getElementById("result").appendChild(node);
+              }
+            });
+          });
+        });
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
