@@ -40,12 +40,11 @@
             console.log(xml)
             $(xml).find('lots').each( function(){
               var item = $(this);
-
+              console.log(item.find('number'));
               if(item.find('number')==searchvalue)
               {
-                console.log('Found it');
                 node = document.createElement("p");
-                textnode = document.createTextNode($(this).get());
+                textnode = document.createTextNode(searchvalue);
                 node.appendChild(textnode);
                 document.getElementById("result").appendChild(node);
               }
