@@ -45,7 +45,7 @@
               {
                 console.log('Found it');
                 node = document.createElement("p");
-                textnode = document.createTextNode(item.innerHTML);
+                textnode = document.createTextNode(item.find('farm').text());
                 node.appendChild(textnode);
                 document.getElementById("result").appendChild(node);
               }
