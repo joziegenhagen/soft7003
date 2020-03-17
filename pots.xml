@@ -165,7 +165,6 @@
 			<packer>Star's Packing Ltd</packer>
 			<honeyType>Norwegian Wood Honey</honeyType>
 			<hiveNumber>A1</hiveNumber>
-			<websiteLink></websiteLink>
 			<qualityControl>pass</qualityControl>
 			<weight>500</weight>
 		</lot>
@@ -177,7 +176,6 @@
 			<packer>Wood's Packing Ltd</packer>
 			<honeyType>Sticky Fingers Honey</honeyType>
 			<hiveNumber>C6</hiveNumber>
-			<websiteLink></websiteLink>
 			<qualityControl>fail</qualityControl>
 			<weight>1000</weight>
 		</lot>
@@ -189,7 +187,6 @@
 			<packer>Star's Packing Ltd</packer>
 			<honeyType>Hot Space Honey</honeyType>
 			<hiveNumber>D9</hiveNumber>
-			<websiteLink></websiteLink>
 			<qualityControl>fail</qualityControl>
 			<weight>1000</weight>
 		</lot>		
