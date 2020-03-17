@@ -94,3 +94,10 @@ input.textbox[name=number] {
 p {
   color: #494d59;
 }
+
+#result {
+  padding: 20px;
+  background: #f4f4f4;
+  color: inherit;
+  border-radius: 4px;
+}
