@@ -43,6 +43,7 @@
               console.log(item.find('number'));
               if(item.find('number').textContent==searchvalue)
               {
+                console.log('Found it');
                 node = document.createElement("p");
                 textnode = document.createTextNode(searchvalue);
                 node.appendChild(textnode);
