@@ -98,6 +98,12 @@ p {
 #result {
   padding: 20px;
   background: #f4f4f4;
-  color: #000000;
+  color: inherit;
   border-radius: 4px;
+}
+
+table {
+  color: #000000;
+  align-content: left;
+  border: 1px solid #000000;
 }
