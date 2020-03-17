@@ -41,7 +41,7 @@
             $(xml).find('lots').each( function(){
               var item = $(this);
               console.log(item.find('number'));
-              if(item.find('number')==searchvalue)
+              if(item.find('number').textContent==searchvalue)
               {
                 node = document.createElement("p");
                 textnode = document.createTextNode(searchvalue);
