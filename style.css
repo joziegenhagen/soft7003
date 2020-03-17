@@ -96,6 +96,7 @@ p {
 }
 
 #result {
+  margin-top: 20px;
   padding: 20px;
   background: #f4f4f4;
   color: inherit;
@@ -104,6 +105,7 @@ p {
 
 table {
   color: #000000;
+  border-top: 1px solid #000000;
 }
 
 th {
