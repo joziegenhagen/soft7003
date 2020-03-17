@@ -33,18 +33,16 @@
         var xml;
         var attributes = ['Number', 'Quantity', 'Farm', 'Importer', 'Packer',
                           'Honey Type', 'Hive Number', 'Quality Control', 'Weight'];
-        var values = [];
         // When user clicks login button (#log), 
         $('#searchbutton').click(function(){
           // Opens pots.xml
           $.get('pots.xml', null, function (data, textStatus) {
             var found = false;
             xml=data;
-            console.log(xml)
+            var values = [];
             $(xml).find('lots').find('lot').each( function(){
               var item = $(this);
               if (item.find('number').text()==$('#searchbox').val()) {
-                // console.log('Found it');
                 found = true;
                 item.children().each( function(){
                   values.push($(this).text());
@@ -63,7 +61,6 @@
             if (found == false) {
               displayResult();
             }
-            console.log(attributes, values);
           });
         });
       });
