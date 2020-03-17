@@ -38,7 +38,7 @@
           $.get('pots.xml', null, function (data, textStatus) {
             xml=data;
             console.log(xml)
-            $(xml).find('number').each( function(){
+            $(xml).find('lot').each( function(){
               var item = $(this);
 
               if(item.find('number').text()==searchvalue)
