@@ -38,21 +38,24 @@
           console.log(searchvalue);
           // Opens pots.xml
           $.get('pots.xml', null, function (data, textStatus) {
+            var found = false;
             xml=data;
             console.log(xml)
             $(xml).find('lots').find('lot').each( function(){
               var item = $(this);
               console.log(item.find('number'));
-              if(item.find('number').text()==$('#searchbox').val()) {
+              if (item.find('number').text()==$('#searchbox').val()) {
                 console.log('Found it');
+                found = true;
                 node = document.createElement("p");
                 textnode = document.createTextNode(item.find('farm').text());
                 node.appendChild(textnode);
                 document.getElementById("result").appendChild(node);
-              } else {
-                displayResult();
               }
             });
+            if (found == false) {
+              displayResult();
+            }
           });
         });
       });
