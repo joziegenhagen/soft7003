@@ -1,7 +1,7 @@
 # Honey Tracker
 
 ## Description
-This web app tracks honey and where it came from.
+This web app tracks honey and its orgin.
 
 This project was completed to meet the coursework requirements for SOFT7003 Advanced Software Development at Oxford Brookes University, spring 2020.
 
