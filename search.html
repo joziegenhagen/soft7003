@@ -45,7 +45,7 @@
               {
                 console.log('Found it');
                 node = document.createElement("p");
-                textnode = document.createTextNode(item);
+                textnode = document.createTextNode(item.innerHTML);
                 node.appendChild(textnode);
                 document.getElementById("result").appendChild(node);
               }
