@@ -41,7 +41,7 @@
             $(xml).find('lots').each( function(){
               var item = $(this);
               console.log(item.find('number'));
-              if(item.find('number').textContent==searchvalue)
+              if(item.find('number').text()==$('#searchbox').val())
               {
                 console.log('Found it');
                 node = document.createElement("p");
