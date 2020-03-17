@@ -38,13 +38,13 @@
           $.get('pots.xml', null, function (data, textStatus) {
             xml=data;
             console.log(xml)
-            $(xml).find('lot').each( function(){
+            $(xml).find('lots').each( function(){
               var item = $(this);
 
-              if(item.find('lot/number').text()==searchvalue)
+              if(item.find('number').text()==searchvalue)
               {
                 node = document.createElement("p")
-                textnode = document.createTextNode(item.find('farm'));
+                textnode = document.createTextNode($(this).get());
                 node.appendChild(textnode);
                 document.getElementById("result").appendChild(node);
               }
