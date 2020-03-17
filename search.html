@@ -41,13 +41,14 @@
             $(xml).find('lots').find('lot').each( function(){
               var item = $(this);
               console.log(item.find('number'));
-              if(item.find('number').text()==$('#searchbox').val())
-              {
+              if(item.find('number').text()==$('#searchbox').val()) {
                 console.log('Found it');
                 node = document.createElement("p");
                 textnode = document.createTextNode(item.find('farm').text());
                 node.appendChild(textnode);
                 document.getElementById("result").appendChild(node);
+              } else {
+                displayResults();
               }
             });
           });
