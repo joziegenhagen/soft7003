@@ -19,8 +19,8 @@
     <form>
       <h1>Honey Tracker</h1>
       <section class="form">
-        <input type="email" name="email" class="textbox" placeholder="Email address" autofocus>
-        <input type="password" name="password" class="textbox" placeholder="Password">
+        <input type="email" id="userid" name="email" class="textbox" placeholder="Email address" autofocus>
+        <input type="password" id="pwd" name="password" class="textbox" placeholder="Password">
         <input type="button" id="log" value="Login">
       </section>
     </form>
@@ -28,9 +28,11 @@
  <script>
     $(document).ready(function(){
    var xml;
+   // When user clicks login button (#log), 
   $('#log').click(function(){
+        // Opens passwords.xml
        $.get('passwords.xml', null, function (data, textStatus) {
-           xml=data;
+           xml=data;  
             $(xml).find('user').each( function(){
                 var item = $(this);
 
