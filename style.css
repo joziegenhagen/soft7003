@@ -104,6 +104,12 @@ p {
 
 table {
   color: #000000;
-  align-content: left;
-  border: 1px solid #000000;
+}
+
+th {
+  text-align: right;
+}
+
+td {
+  text-align: left;
 }
