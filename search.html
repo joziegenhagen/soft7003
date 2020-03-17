@@ -33,6 +33,7 @@
         // When user clicks login button (#log), 
         $('#searchbutton').click(function(){
           searchvalue = document.getElementById('searchbox').value;
+          console.log(searchvalue);
           // Opens pots.xml
           $.get('pots.xml', null, function (data, textStatus) {
             xml=data;  
