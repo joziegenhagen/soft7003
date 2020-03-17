@@ -49,10 +49,15 @@
                 item.children().each( function(){
                   values.push($(this).text());
                 });
-                node = document.createElement("p");
-                textnode = document.createTextNode(item.find('farm').text());
-                node.appendChild(textnode);
-                document.getElementById("result").appendChild(node);
+                var html = `<table>`;
+                for (i = 0;i < attributes.length; i++) {
+                  html += `<tr><th>${attributes[i]}</th><td>${values[i]}</td></tr>`;
+                }
+                html += `</table>`;
+                // node = document.createElement("p");
+                // textnode = document.createTextNode(item.find('farm').text());
+                // node.appendChild(textnode);
+                document.getElementById("result").appendChild(html);
               }
             });
             if (found == false) {
