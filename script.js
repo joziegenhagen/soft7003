@@ -35,6 +35,6 @@ function displayResult() {
     xsltProcessor = new XSLTProcessor();
     xsltProcessor.importStylesheet(xsl);
     resultDocument = xsltProcessor.transformToFragment(xml, document);
-    document.getElementById("result").appendChild(resultDocument);
+    document.getElementById("table").appendChild(resultDocument);
   }
 }
