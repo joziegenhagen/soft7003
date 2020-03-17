@@ -36,7 +36,8 @@
           console.log(searchvalue);
           // Opens pots.xml
           $.get('pots.xml', null, function (data, textStatus) {
-            xml=data;  
+            xml=data;
+            console.log(xml)
             $(xml).find('number').each( function(){
               var item = $(this);
 
