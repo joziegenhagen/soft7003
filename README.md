@@ -1,7 +1,7 @@
 # Honey Tracker
 
 ## Description
-This web app tracks honey and where it came from.
+This web app tracks honey pots and its orgin.
 
 This project was completed to meet the coursework requirements for SOFT7003 Advanced Software Development at Oxford Brookes University, spring 2020.
 
@@ -11,7 +11,7 @@ Instructor: Rachel Harrison
 Installation instructions will be detailed here.
 
 ## Usage
-User instructions will be detailed here.
+Tracking app that its beneficial for client/shop to check the honey orgin and information about the product and the farm itself.
 
 ## Authors
 - **Author Name** - *Brief role description* - [github_link](#)
