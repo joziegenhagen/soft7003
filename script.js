@@ -28,7 +28,7 @@ function displayResult() {
   // code for IE
   if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
     ex = xml.transformNode(xsl);
-    document.getElementById("result").innerHTML = ex;
+    document.getElementById("table").innerHTML = ex;
   }
   // code for Chrome, Firefox, Opera, etc.
   else if (document.implementation && document.implementation.createDocument) {
